@@ -1,0 +1,133 @@
+﻿<!--<!DOCTYPE html>-->
+<!--<html data-ng-app="samples">-->
+<!--<head>-->
+    <!--<title>AngularJS Demos</title>-->
+    <!--<link href="Content/bootstrap.min.css" rel="stylesheet" />-->
+    <!--<link href="Content/bootstrap-responsive.min.css" rel="stylesheet" />-->
+    <!--<link href="Content/styles.css" rel="stylesheet" />-->
+<!--</head>-->
+<!--<body data-ng-controller="samplesController">-->
+    <!--<h2>-->
+        <!--<img src="Content/images/angularShield.png" />ngularJS Demos</h2>-->
+    <!--<div class="row">-->
+        <!--<div class="span4 section">-->
+            <!--<h5>Demos:</h5>-->
+            <!--<ol>-->
+                <!--<li data-ng-repeat="page in pages">-->
+                    <!--<a href="{{href}}" data-ng-click="loadPage(page)">{{ page.title }}</a>-->
+                <!--</li>-->
+            <!--</ol>-->
+        <!--</div>-->
+        <!--<div class="span8">-->
+            <!--<ng-include src="template"></ng-include>-->
+            <!--&lt;!&ndash; <div id="sampleContent"></div> &ndash;&gt;-->
+            <!--<br />-->
+            <!--<div class="container">-->
+                <!--<h4>Code:</h4>-->
+                <!--<textarea></textarea>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+  <!---->
+    <!--<script src="Scripts/jquery.min.js"></script>    -->
+    <!--<script src="Scripts/angular.js"></script>-->
+    <!--<script src="Scripts/bootstrap.min.js"></script>-->
+
+    <!--<script>-->
+        <!--var urlBase = '/DemoPartials/';-->
+        <!--var samplesApp = angular.module('samples', []);-->
+
+        <!--samplesApp.controller('samplesController', function ($scope, $templateCache, $http, $location) {-->
+            <!--$scope.template = '';-->
+            <!--$scope.html = '';-->
+            <!--$scope.pages = [-->
+                <!--{ title: 'Data binding basics', url: urlBase + '1. Data binding basics.html' },-->
+                <!--{ title: 'Looping with ng-repeat', url: urlBase + '2. Looping with ng-repeat.html' },-->
+                <!--{ title: 'Adding a Simple Controller', url: urlBase + '3. Adding a Simple Controller.html' },-->
+                <!--{ title: 'Using ng-model and ng-click Directives', url: urlBase + '4. Using ng-model and ng-click Directives.html' },-->
+                <!--{ title: 'Filtering and Sorting Data', url: urlBase + '5. Filtering and Sorting Data.html' },-->
+                <!--{ title: 'Adding a Module and Controller', url: urlBase + '6. Adding a Module and Controller.html' },-->
+                <!--{ title: 'Adding Module Configuration and Routing', url: urlBase + '7. Adding Module Configuration and Routing.html' },-->
+                <!--{ title: 'Module, Controller and Factory', url: urlBase + '8. Module-Controller-Factory.html' },-->
+                <!--{ title: 'Customer Management App', url: 'CustomerManagementApp.html', href: 'CustomerManagementApp.html' },-->
+            <!--];-->
+
+            <!--$scope.loadPage = function (page) {-->
+                <!--if (page.href) {-->
+                    <!--document.location = page.href; //Load new page-->
+                <!--}-->
+                <!--$scope.template = page.url;-->
+                <!--$http({ method: 'GET', url: page.url, cache: $templateCache })-->
+                  <!--.success(function (html) {-->
+                      <!--$scope.html = html;-->
+                      <!--$('textarea').text(html); //Had to go with this due to IE-->
+                  <!--})-->
+                  <!--.error(function (html, status) {-->
+                      <!--$scope.html = 'Unable to load code: ' + status;-->
+                  <!--});-->
+            <!--}-->
+        <!--});-->
+    <!--</script>-->
+<!--</body>-->
+<!--</html>-->
+<!doctype html>
+<html lang="en" data-ng-app="app">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!--css load-->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="Content/styles.css" rel="stylesheet" />
+    <link href="Content/normalize.css" rel="stylesheet" />
+    <!--javascript  load-->
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/app.js"></script>
+</head>
+<style>
+    .red{
+        background-color: orange;
+    }
+</style>
+<body>
+<div class="page-header text-center">
+    <h1 class="">AngularJs - Getting Stated</h1>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="span2">
+            <ul class="links">
+                <li class="step1">
+                    <a href="/DemoList.html#/home">Home</a>
+                </li>
+                <li class="step2">
+                    <a href="/DemoList.html#/login">Login</a>
+                </li>
+            </ul>
+        </div>
+        <div class="span10 text-center">
+            <ng-view></ng-view>
+        </div>
+    </div>
+</div>
+
+    <!--<div class="">Hello{{userGroup.name}}</div>
+    &lt;!&ndash;<ul data-ng-repeat="event in userGroup.events">&ndash;&gt;
+    <ul >
+        <li class="">Введите количество людей
+            <input type="number" data-ng-model="peopleHere"/>
+        </li>
+        <li class="">Людей в комнате : {{peopleHere}}</li>
+        <li data-ng-class="{red:peopleHere>5}">{{peopleDescription}}</li>
+        <li data-ng-click="notify(event.descr)">{{event.name}}</li>
+    </ul>
+        <div ng-name></div>
+    <div data-ng-view class=""></div>-->
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!--<h2>Hello {{login}}</h2>-->
+<form action="http://angular.loc/view/login.html" method="get">
+    <div class="row">
+        <div class="small6 large-centered columns columns">
+            <input type="text" placeholder="Login" data-ng-model="credential.login"/>
+        </div>
+
+        <div class="small6 large-centered columns columns">
+            <input type="password" placeholder="Password" data-ng-model="credential.password"/>
+        </div>
+
+        <div class="small6 large-centered columns columns">
+            <!--<button class="btn">Log in</button>-->
+            <div class="btn-group">
+                <button type="button" class="btn btn-default btn-primary" data-ng-click="login()">Log in</button>
+                <button type="button" class="btn btn-default btn-danger">Logout</button>
+                <button type="button" class="btn btn-default btn-warning">Правая</button>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="text-center" copyright></div>
+<!--
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    &lt;!&ndash;css load&ndash;&gt;
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="../Content/styles.css" rel="stylesheet" />
+    <link href="../Content/normalize.css" rel="stylesheet" />
+    &lt;!&ndash;javascript  load&ndash;&gt;
+    <script src="../Scripts/jquery.min.js"></script>
+    <script src="../Scripts/angular.js"></script>
+    <script src="../Scripts/angular-route.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="../Scripts/app.js"></script>
+
+</head>
+<body>
+<form style="margin:10% 50%" action="http://angular.loc/view/login.html" method="get">
+    <div class="row">
+        <div class="small6 large-centered columns columns">
+            <input type="text" placeholder="Login"/>
+        </div>
+
+        <div class="small6 large-centered columns columns">
+            <input type="password" placeholder="Password"/>
+        </div>
+
+        <div class="small6 large-centered columns columns">
+            <button class="button">Log in</button>
+        </div>
+    </div>
+</form>
+</body>
+</html>-->
