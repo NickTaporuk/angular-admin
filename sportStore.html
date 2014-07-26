@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" data-ng-app="sportsStore">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!--css load-->
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="Content/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="Content/styles.css" rel="stylesheet" />
+    <!--<link href="Content/normalize.css" rel="stylesheet" />-->
+    <!--javascript  load-->
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/angular-resource.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <!--<script src="Scripts/app.js"></script>-->
+    <script src="Scripts/angular-resource/controllers/sportStore.js"></script>
+    <script src="Scripts/angular-resource/controllers/productListCtrl.js"></script>
+    <script src="Scripts/angular-resource/filters/customFilters.js"></script>
+</head>
+<body ng-controller="sportsStoreCtrl">
+<div class="navbar navbar-inverse">
+    <a class="navbar-brand" href="#">SPORTS STORE</a>
+</div>
+<div class="panel panel-default row" ng-controller="productListCtrl">
+    <div class="col-xs-3">
+        <a ng-click="selectCategory()"
+           class="btn btn-block btn-default btn-lg">Home</a>
+        <a ng-repeat="item in data.products | orderBy:'category' | unique:'category'"
+           ng-click="selectCategory(item)" class=" btn btn-block btn-default btn-lg" ng-class="getCategoryClass(item)">
+            {{item}}
+        </a>
+    </div>
+    <div class="col-xs-8">
+        <div class="well"
+             ng-repeat="item in data.products | filter:categoryFilterFn">
+            <h3>
+                <strong>{{item.name}}</strong>
+<span class="pull-right label label-primary">
+{{item.price | currency}}
+</span>
+            </h3>
+            <span class="lead">{{item.description}}</span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

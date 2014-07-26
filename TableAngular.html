@@ -27,6 +27,7 @@
         app.run(function ($http) {
             $http.get("../angular-admin/todo.json").success(function (data) {
                 model.items = data;
+//                console.log(angular.fromJson(data));
             });
         });
         /**
